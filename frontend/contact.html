@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactez-nous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    input, textarea, button {
+      width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0b3c61; color: white; border: none; font-size: 16px; cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a3353;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>📞 Formulaire de contact</h2>
+  <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
+    <input type="text" name="Nom" placeholder="👤 Votre nom" required>
+    <input type="email" name="Email" placeholder="📧 Votre email" required >
+    <textarea name="Message" placeholder="💬 Votre message" required></textarea>
+
+    <!-- FormSubmit options -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    
+    <!-- ✅ Redirection vers ton site Streamlit (fictif pour le moment) -->
+    <input type="hidden" name="_next" value="https://allocourses.streamlit.app/?page=contact_envoye">
+
+    <button type="submit">📨 Envoyer le message</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Passer une commande</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    input, select, textarea, button {
+      width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0b3c61; color: white; border: none; font-size: 16px; cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a3353;
+    }
+  </style>
+</head>
+<body>
+  <h2>🛒 Formulaire de commande</h2>
+  <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
+    <input type="text" name="Nom complet" placeholder="👤 Nom complet" required>
+    <input type="email" name="Email" placeholder="📧 Votre email" required>
+    <input type="text" name="Téléphone" placeholder="📞 Téléphone / WhatsApp" required>
+    <textarea name="Adresse" placeholder="📍 Adresse de livraison (quartier, rue...)" required></textarea>
+
+    <select name="Nombre estimé d'articles" required>
+      <option value="" disabled selected>🧺 Nombre estimé d'articles</option>
+      <option value="Moins de 10">Moins de 10</option>
+      <option value="10 à 20">10 à 20</option>
+      <option value="21 à 30">21 à 30</option>
+      <option value="31 à 40">31 à 40</option>
+      <option value="41 à 50">41 à 50</option>
+    </select>
+
+    <textarea name="Liste des articles" placeholder="📝 Liste des articles à acheter" required></textarea>
+    <textarea name="Commentaire" placeholder="💬 Commentaire ou précision (facultatif)"></textarea>
+    <input type="date" name="Date de livraison" required>
+
+    <!-- Configuration FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- ✅ Redirection vers une URL fictive que tu pourras remplacer -->
+    <input type="hidden" name="_next" value="https://allocourses.streamlit.app/?page=commande_envoyee">
+
+    <button type="submit">✅ Envoyer la commande</button>
+  </form>
+</body>
+</html>
