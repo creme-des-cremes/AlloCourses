@@ -1,6 +1,6 @@
-streamlit=1.45.1
-pandas
-numpy
-requests
-geopy
-pydeck
+streamlit==1.38.0
+pandas>=1.5,<3
+numpy>=1.23,<2
+requests>=2.31
+geopy>=2.4
+pydeck>=0.9
