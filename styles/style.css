@@ -1,21 +1,21 @@
-/* 🌟 Fond principal jaune chaleureux */
-body, .stApp {
+/* 🌟 Fond principal */
+body {
     background-color: #8fc4e7;
     color: #0b3c61;
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 🟦 Titres lisibles sur fond clair */
+/* 🟦 Titres */
 h1, h2, h3 {
     font-weight: 700;
     color: #0b3c61;
     margin-top: 1rem;
 }
 
-/* 🟦 Boutons élégants bleus */
-button[kind="primary"] {
+/* 🟦 Boutons Bootstrap custom */
+.btn-primary {
     background-color: #2680b8;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 24px;
@@ -24,28 +24,18 @@ button[kind="primary"] {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button[kind="primary"]:hover {
+.btn-primary:hover {
     background-color: #09304f;
     transform: scale(1.03);
 }
 
 /* 📝 Champs de formulaire */
-.stTextInput input, .stTextArea textarea {
+input, textarea, select {
     background-color: #ffffff;
     color: #0b3c61;
     border: 1px solid #ccc;
     border-radius: 6px;
     padding: 8px;
-}
-
-/* 📦 Sidebar (en version blanche ou claire) */
-.css-1d391kg, .css-6qob1r {
-    background-color: #fff;
-    border-right: 1px solid #eee;
-}
-
-.css-1y4p8pa, .css-17lntkn, .css-1lcbmhc {
-    color: #0b3c61;
 }
 
 /* 🖼️ Images */
