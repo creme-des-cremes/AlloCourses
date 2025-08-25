@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>💬 Témoignages - AlloCourses</title>
-  <link rel="icon" href="../assets/logo.jpeg" type="image/jpeg">
+  <link rel="icon" href="../logo.jpeg" type="image/jpeg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body style="background-color:#fff; color:#0b3c61;">
 
