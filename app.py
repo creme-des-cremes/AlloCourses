@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlloCourses - Livraisons à domicile à Dakar</title>
-  <link rel="icon" href="assets/logo.jpeg" type="image/jpeg">
+  <link rel="icon" href="logo.jpeg" type="image/jpeg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
@@ -33,7 +33,7 @@
 
   <!-- Hero Section -->
   <section class="text-center py-5">
-    <img src="assets/logo.jpeg" alt="AlloCourses Logo" class="mb-3" width="120">
+    <img src="logo.jpeg" alt="AlloCourses Logo" class="mb-3" width="120">
     <h1>📞 Bienvenue chez <span class="text-warning">AlloCourses</span> 🛒</h1>
     <p class="fs-5">Le moyen le plus simple et rapide de faire vos courses à Dakar</p>
   </section>
