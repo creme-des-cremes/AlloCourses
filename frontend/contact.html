@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    h2 { text-align: center; }
     input, textarea, button {
       width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
     }
@@ -15,26 +16,41 @@
     button:hover {
       background-color: #0a3353;
     }
-    h2 {
-      text-align: center;
+    nav {
+      text-align: center; margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px; text-decoration: none; color: #0b3c61; font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <!-- ✅ Menu haut -->
+  <nav>
+    <a href="commande.html">🛒 Commande</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+
   <h2>📞 Formulaire de contact</h2>
   <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
     <input type="text" name="Nom" placeholder="👤 Votre nom" required>
-    <input type="email" name="Email" placeholder="📧 Votre email" required >
+    <input type="email" name="Email" placeholder="📧 Votre email" required>
     <textarea name="Message" placeholder="💬 Votre message" required></textarea>
 
     <!-- FormSubmit options -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     
-    <!-- ✅ Redirection vers ton site Streamlit (fictif pour le moment) -->
-    <input type="hidden" name="_next" value="https://allocourses.streamlit.app/?page=contact_envoye">
+    <!-- ✅ Redirection : recharge la même page -->
+    <input type="hidden" name="_next" value="contact.html">
 
     <button type="submit">📨 Envoyer le message</button>
   </form>
+
+  <p style="text-align:center; margin-top:20px; font-size:14px; color:gray;">
+    📍 Basé à Dakar – service client disponible 7j/7  
+    📧 Email : <b>allocoursesn@gmail.com</b>  
+    📞 WhatsApp : <b>+221 71 050 84 66</b>
+  </p>
 </body>
 </html>
