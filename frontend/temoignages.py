@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="d-flex bg-white p-3 rounded shadow-sm">
-          <img src="../frontend/fatou.jpg" alt="Fatou D." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
+          <img src="fatou.jpg" alt="Fatou D." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
           <div>
             <p class="fw-bold mb-1">Fatou D. (Liberté 6)</p>
             <p>Service rapide et fiable, j’ai reçu toutes mes courses en moins de 2 heures ! Bravo à toute l’équipe.</p>
@@ -52,7 +52,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="d-flex bg-white p-3 rounded shadow-sm">
-          <img src="../frontend/mamadou.jpg" alt="Mamadou S." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
+          <img src="mamadou.jpg" alt="Mamadou S." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
           <div>
             <p class="fw-bold mb-1">Mamadou S. (Parcelles Assainies)</p>
             <p>Je n’ai jamais eu un service aussi pratique. Même les articles difficiles à trouver ont été livrés.</p>
@@ -61,7 +61,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="d-flex bg-white p-3 rounded shadow-sm">
-          <img src="../frontend/aicha.jpg" alt="Aïcha N." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
+          <img src="aicha.jpg" alt="Aïcha N." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
           <div>
             <p class="fw-bold mb-1">Aïcha N. (Ngor)</p>
             <p>Très bonne communication, livreur courtois et les prix sont justes. Je recommande à 100%.</p>
@@ -70,10 +70,10 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="d-flex bg-white p-3 rounded shadow-sm">
-          <img src="../frontend/cheikh.jpg" alt="Cheikh B." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
+          <img src="cheikh.jpg" alt="Cheikh B." class="rounded-circle me-3" width="80" height="80" style="object-fit: cover;">
           <div>
             <p class="fw-bold mb-1">Cheikh B. (Fass)</p>
-            <p>J’étais sceptique au début mais franchement, ils m’ont sauvé plusieurs fois. Super utile !</p>
+            <p>J’étais sceptique au début mais franchement, ils m’ont sauvé plusieurs fois quand j'etais occupé pour faire mes achats et courses. Super utile !</p>
           </div>
         </div>
       </div>
