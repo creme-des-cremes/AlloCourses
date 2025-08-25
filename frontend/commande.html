@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    h2 { text-align: center; }
     input, select, textarea, button {
       width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
     }
@@ -15,9 +16,20 @@
     button:hover {
       background-color: #0a3353;
     }
+    nav {
+      text-align: center; margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px; text-decoration: none; color: #0b3c61; font-weight: bold;
+    }
   </style>
 </head>
 <body>
+  <!-- ✅ Menu haut -->
+  <nav>
+    <a href="commande.html">🏠 Accueil / Commande</a>
+  </nav>
+
   <h2>🛒 Formulaire de commande</h2>
   <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
     <input type="text" name="Nom complet" placeholder="👤 Nom complet" required>
@@ -38,12 +50,17 @@
     <textarea name="Commentaire" placeholder="💬 Commentaire ou précision (facultatif)"></textarea>
     <input type="date" name="Date de livraison" required>
 
-    <!-- Configuration FormSubmit -->
+    <!-- Config FormSubmit -->
     <input type="hidden" name="_captcha" value="false">
-    <!-- ✅ Redirection vers une URL fictive que tu pourras remplacer -->
-    <input type="hidden" name="_next" value="https://allocourses.streamlit.app/?page=commande_envoyee">
+    <!-- ✅ Redirection : reste sur la même page avec un petit message -->
+    <input type="hidden" name="_next" value="commande.html">
 
     <button type="submit">✅ Envoyer la commande</button>
   </form>
+
+  <p style="text-align:center; margin-top:20px; font-size:14px; color:gray;">
+    📞 Besoin d'aide ? Contactez-nous au <b>+221 71 050 84 66</b> <br>
+    📍 Livraison uniquement à Dakar
+  </p>
 </body>
 </html>
