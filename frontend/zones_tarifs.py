@@ -1,52 +1,137 @@
-import streamlit as st
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zones & Tarifs - AlloCourses</title>
+  <link rel="icon" href="../assets/logo.jpeg" type="image/jpeg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body style="background-color:#fff; color:#0b3c61;">
 
-def zones_tarifs():
-    st.markdown("<h2 style='text-align: center;'>📍 Zones desservies & Tarification</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center;'>Voici une estimation des frais selon votre localisation, le temps de courses et le poids des articles.</p>", unsafe_allow_html=True)
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="../index.html">🏠 AlloCourses</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="commande.html">📋 Commander</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="zones.html">📍 Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">📞 Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="temoignages.html">💬 Témoignages</a></li>
+        </ul>
+      </div>
+    </div> 
+  </nav>
 
-    st.markdown("---")
-    st.subheader("🚚 Zones de livraison depuis notre agence (Nord Foire)")
+  <!-- Zones & Tarifs -->
+  <div class="container py-5">
+    <h2 class="text-center mb-4">📍 Zones desservies & Tarification</h2>
+    <p class="text-center">Voici une estimation des frais selon votre localisation, le temps de courses et le poids des articles.</p>
 
-    st.markdown("""
-    Nous livrons partout à **Dakar**, depuis notre point de départ à **Nord Foire**.
+    <hr>
+    <h4>🚚 Zones de livraison depuis notre agence (Nord Foire)</h4>
+    <p>
+      Nous livrons partout à <strong>Dakar</strong>, depuis notre point de départ à <strong>Nord Foire</strong>.<br>
+      👉 Les tarifs ci-dessous sont <strong>des estimations générales</strong>.<br>
+      Pour obtenir un <strong>calcul exact et personnalisé</strong>, veuillez <strong>télécharger l'application AlloCourses sur le Play Store</strong>.
+    </p>
 
-    👉 Les tarifs ci-dessous sont **des estimations générales**.  
-    Pour obtenir un **calcul exact et personnalisé**, veuillez **télécharger l'application AlloCourses sur le Play Store**.
-    """)
+    <hr>
+    <h5>💰 Estimation globale par zone</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Zone</th>
+            <th>Distance approximative</th>
+            <th>Frais de transport (Aller/Retour)</th>
+            <th>Temps moyen au supermarché</th>
+            <th>Poids moyen estimé</th>
+            <th>Coût AlloCourses estimé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Proche (≤ 5 km)</td>
+            <td>Yoff, Ouakam, Almadies</td>
+            <td>3 000 FCFA</td>
+            <td>1H00 min</td>
+            <td>10 kg</td>
+            <td>6 000 FCFA</td>
+          </tr>
+          <tr>
+            <td>Moyenne (6-10 km)</td>
+            <td>Liberté 6, Mermoz, HLM</td>
+            <td>5 000 FCFA</td>
+            <td>2H00 min</td>
+            <td>15 kg</td>
+            <td>12 000 FCFA</td>
+          </tr>
+          <tr>
+            <td>Éloignée (> 10 km)</td>
+            <td>Plateau, Parcelles...</td>
+            <td>6 000 FCFA</td>
+            <td>3H00 min</td>
+            <td>20 kg</td>
+            <td>18 000 FCFA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert alert-info">
+      📦 Le tarif du <strong>transport</strong> dépend du trajet complet <strong>Nord Foire → Supermarché → Client</strong>.<br>
+      NB : le paiement du service de livraison est indépendant du service AlloCourses.
+    </div>
 
-    st.markdown("""
-    ---
-    ### 💰 Estimation globale par zone
+    <hr>
+    <h4>📊 Catalogue indicatif (prix moyen/kg)</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Article</th>
+            <th>Prix moyen (FCFA/kg)</th>
+            <th>Exemple poids</th>
+            <th>Coût estimé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Riz parfumé</td><td>800 FCFA</td><td>5 kg</td><td>4 000 FCFA</td></tr>
+          <tr><td>Tomates fraîches</td><td>600 FCFA</td><td>2 kg</td><td>1 200 FCFA</td></tr>
+          <tr><td>Pommes de terre</td><td>500 FCFA</td><td>3 kg</td><td>1 500 FCFA</td></tr>
+          <tr><td>Sucre en poudre</td><td>750 FCFA</td><td>2 kg</td><td>1 500 FCFA</td></tr>
+          <tr><td>Viande de bœuf</td><td>3 000 FCFA</td><td>1 kg</td><td>3 000 FCFA</td></tr>
+          <tr><td>Poisson frais (Thiof)</td><td>3 500 FCFA</td><td>1 kg</td><td>3 500 FCFA</td></tr>
+          <tr><td>Oignons</td><td>400 FCFA</td><td>2 kg</td><td>800 FCFA</td></tr>
+          <tr><td>Bananes</td><td>700 FCFA</td><td>1 kg</td><td>700 FCFA</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    | Zone               | Distance approximative | Frais de transport (Aller/Retour) | Temps moyen au supermarché | Poids moyen estimé | Coût AlloCourses estimé |
-    |--------------------|------------------------|---------------------------|-----------------------------|---------------------|--------------------------|
-    | Proche (≤ 5 km)    | Yoff, Ouakam, Almadies | 3 000 FCFA                | 1HOO min                    | 10 kg              | 6 000 FCFA               |
-    | Moyenne (6-10 km)  | Liberté 6, Mermoz, HLM | 5 000 FCFA                | 2H00 min                    | 15 kg              | 12 000 FCFA               |
-    | Éloignée (> 10 km) | Plateau, Parcelles...  | 6 000 FCFA                | 3H00  min                   | 20 kg              | 18 000 FCFA               |
-    """)
+    <p>📝 Ces prix sont fournis à titre <strong>indicatif</strong>, selon les supermarchés partenaires et les saisons.</p>
+    <p>📱 Pour une estimation personnalisée et dynamique, téléchargez l’application <strong>AlloCourses</strong> sur le <strong>Play Store</strong>.</p>
+    <p>📞 Pour toute question spéciale : <strong>+221 XX XXX XX XX</strong></p>
+  </div>
 
-    st.info("📦 Le tarif du **transport** dépend du trajet complet **Nord Foire → Supermarché → Client**. NB:le PAYEMENT du service de livraison est independant du service Allocourses")
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5 border-top">
+    <p>📍 Dakar, Sénégal | 📞 <strong>+221 71 050 84 66</strong></p>
+    <p>
+      Suivez-nous sur 
+      <a href="https://www.facebook.com/share/1a4UwtXRdf/" target="_blank" class="text-danger fw-bold">Facebook</a>
+    </p>
+    <p>&copy; 2025 <strong>AlloCourses</strong>. Tous droits réservés.</p>
+  </footer>
 
-    st.markdown("---")
-    st.subheader("📊 Catalogue indicatif (prix moyen/kg)")
-
-    st.markdown("""
-    | Article                | Prix moyen (FCFA/kg) | Exemple poids | Coût estimé |
-    |------------------------|----------------------|----------------|-------------|
-    | Riz parfumé            | 800 FCFA             | 5 kg           | 4 000 FCFA  |
-    | Tomates fraîches       | 600 FCFA             | 2 kg           | 1 200 FCFA  |
-    | Pommes de terre        | 500 FCFA             | 3 kg           | 1 500 FCFA  |
-    | Sucre en poudre        | 750 FCFA             | 2 kg           | 1 500 FCFA  |
-    | Viande de bœuf         | 3 000 FCFA           | 1 kg           | 3 000 FCFA  |
-    | Poisson frais (Thiof)  | 3 500 FCFA           | 1 kg           | 3 500 FCFA  |
-    | Oignons                | 400 FCFA             | 2 kg           | 800 FCFA    |
-    | Bananes                | 700 FCFA             | 1 kg           | 700 FCFA    |
-    """)
-
-    st.markdown("""
-    📝 Ces prix sont fournis à titre **indicatif**, selon les supermarchés partenaires et les saisons.
-
-    ---
-    📱 Pour une estimation personnalisée et dynamique, téléchargez l’application **AlloCourses** sur le **Play Store**.  
-    📞 Pour toute question spéciale : **+221 XX XXX XX XX**
-    """)
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
