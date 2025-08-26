@@ -4,26 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Passer une commande - AlloCourses</title>
-  <link rel="icon" href="../assets/logo.jpeg" type="image/jpeg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="../index.html">🏠 AlloCourses</a>
+      <a class="navbar-brand fw-bold text-white" href="../index.html">🏠 AlloCourses</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
           <li class="nav-item"><a class="nav-link active fw-bold" href="commande.html">📋 Commander</a></li>
-          <li class="nav-item"><a class="nav-link" href="zones.html">📍 Tarifs</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">📞 Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="temoignages.html">💬 Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="zones.html">📍 Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">📞 Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="temoignages.html">💬 Témoignages</a></li>
         </ul>
       </div>
     </div>
@@ -32,7 +31,6 @@
   <div class="container py-5">
     <h2 class="text-center mb-4">🛒 Formulaire de commande</h2>
 
-    <!-- Message succès -->
     <div id="successMessage" class="alert alert-success text-center" style="display:none;">
       ✅ Votre commande a bien été envoyée ! Redirection vers l'accueil...
     </div>
@@ -55,6 +53,7 @@
       <input type="date" name="Date de livraison" class="form-control mb-3" required>
 
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="../index.html">
 
       <div class="text-center">
         <button type="submit" class="btn btn-primary px-5">✅ Envoyer la commande</button>
@@ -62,15 +61,19 @@
     </form>
   </div>
 
+  <footer>
+    <p>📍 Dakar, Sénégal | 📞 <strong>+221 71 050 84 66</strong></p>
+    <p>&copy; 2025 <strong>AlloCourses</strong>. Tous droits réservés.</p>
+  </footer>
+
   <script>
     const orderForm = document.getElementById("orderForm");
     orderForm.addEventListener("submit", function(e){
       e.preventDefault();
       document.getElementById("successMessage").style.display = "block";
-      setTimeout(() => { window.location.href = "../index.html"; }, 2000);
+      setTimeout(()=>{ orderForm.submit(); }, 2000);
     });
   </script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
