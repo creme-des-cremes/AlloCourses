@@ -2,70 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contactez-nous</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
-    h2 { text-align: center; }
-    input, textarea, button {
-      width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
-    }
-    button {
-      background-color: #0b3c61; color: white; border: none; font-size: 16px; cursor: pointer;
-    }
-    button:hover {
-      background-color: #0a3353;
-    }
-    nav {
-      text-align: center; margin-bottom: 20px;
-    }
-    nav a {
-      margin: 0 10px; text-decoration: none; color: #0b3c61; font-weight: bold;
-    }
-    .success {
-      background: #d4edda; color: #155724; padding: 12px; border-radius: 5px; text-align: center;
-      margin-bottom: 20px; border: 1px solid #c3e6cb;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez-nous - AlloCourses</title>
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-  <!-- ✅ Menu haut -->
-  <nav>
-    <a href="commande.html">🛒 Commande</a>
-    <a href="contact.html">📞 Contact</a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="../index.html">🏠 AlloCourses</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="commande.html">📋 Commander</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">📞 Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="temoignages.html">💬 Témoignages</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <!-- ✅ Zone pour message -->
-  <div id="successMessage" class="success" style="display:none;">
-    ✅ Votre message a bien été envoyé ! Nous vous répondrons rapidement 💌
+  <div class="container py-5">
+    <h2 class="text-center mb-4">📞 Formulaire de contact</h2>
+
+    <!-- Message succès -->
+    <div id="successMessage" class="alert alert-success text-center" style="display:none;">
+      ✅ Votre message a bien été envoyé ! Redirection vers l'accueil...
+    </div>
+
+    <!-- Formulaire -->
+    <form id="contactForm" action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
+      <input type="text" name="Nom" placeholder="👤 Votre nom" class="form-control mb-3" required>
+      <input type="email" name="Email" placeholder="📧 Votre email" class="form-control mb-3" required>
+      <textarea name="Message" placeholder="💬 Votre message" class="form-control mb-3" required></textarea>
+
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" class="btn btn-primary w-100">📨 Envoyer le message</button>
+    </form>
   </div>
 
-  <h2>📞 Formulaire de contact</h2>
-  <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
-    <input type="text" name="Nom" placeholder="👤 Votre nom" required>
-    <input type="email" name="Email" placeholder="📧 Votre email" required>
-    <textarea name="Message" placeholder="💬 Votre message" required></textarea>
-
-    <!-- FormSubmit options -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="contact.html?success=1">
-
-    <button type="submit">📨 Envoyer le message</button>
-  </form>
-
-  <p style="text-align:center; margin-top:20px; font-size:14px; color:gray;">
-    📍 Basé à Dakar – service client disponible 7j/7  
-    📧 Email : <b>allocoursesn@gmail.com</b>  
-    📞 WhatsApp : <b>+221 71 050 84 66</b>
-  </p>
-
   <script>
-    // Vérifie si l’URL contient success=1
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("success") === "1") {
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(e){
+      e.preventDefault(); // empêche envoi réel pour tester front
       document.getElementById("successMessage").style.display = "block";
-    }
+      setTimeout(() => { window.location.href = "../index.html"; }, 2000);
+    });
   </script>
+
 </body>
 </html>
