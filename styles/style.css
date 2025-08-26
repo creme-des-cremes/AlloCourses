@@ -1,7 +1,7 @@
 /* 🌟 Fond principal */
 body {
-    background-color: #8fc4e7; /* bleu clair */
-    color: #0b3c61; /* texte foncé */
+    background-color: #8fc4e7; /* bleu clair pour toutes les pages */
+    color: #0b3c61;
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -38,6 +38,16 @@ input, textarea, select {
     border: 1px solid #ccc;
     border-radius: 6px;
     padding: 8px;
+}
+
+/* 🟨 Bloc message succès */
+.alert-success {
+    background-color: #fff9c4 !important; /* jaune clair */
+    color: #155724 !important;
+    border: 1px solid #ffe082;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
 }
 
 /* 🖼️ Images */
