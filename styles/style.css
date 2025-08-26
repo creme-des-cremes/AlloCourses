@@ -1,8 +1,10 @@
 /* 🌟 Fond principal */
 body {
-    background-color: #8fc4e7;
-    color: #0b3c61;
+    background-color: #8fc4e7; /* bleu clair */
+    color: #0b3c61; /* texte foncé */
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* 🟦 Titres */
@@ -54,10 +56,27 @@ a:hover {
     text-decoration: underline;
 }
 
+/* 🧾 Navbar */
+.navbar {
+    background-color: #0b3c61 !important; /* bleu foncé */
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* 🧾 Footer */
 footer {
+    background-color: #09304f; /* bleu très foncé */
+    color: #ffffff;
     text-align: center;
     font-size: 0.9em;
-    color: #555;
+    padding: 20px 0;
     margin-top: 2rem;
+    border-top: 2px solid #0b3c61;
 }
