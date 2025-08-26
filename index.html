@@ -7,43 +7,75 @@
   <link rel="icon" href="logo.jpeg" type="image/jpeg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/style.css">
+  
+  <!-- Styles internes pour tout mettre en bleu -->
+  <style>
+    body {
+      background-color: #cce0ff;
+      color: #0b3c61;
+    }
+    .navbar {
+      background-color: #2680b8 !important;
+    }
+    .navbar .nav-link, .navbar .navbar-brand {
+      color: white !important;
+    }
+    .navbar .nav-link.active {
+      font-weight: bold;
+    }
+    section.hero {
+      background-color: #8fc4e7;
+      color: #0b3c61;
+    }
+    footer {
+      background-color: #09304f;
+      color: white;
+    }
+    footer a {
+      color: #ffd966;
+    }
+    table th {
+      background-color: #b3d1ff;
+    }
+    table td {
+      background-color: #e6f0ff;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color:#2680b8;">
+  <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold text-light" href="index.html">🏠 AlloCourses</a>
+      <a class="navbar-brand fw-bold" href="index.html">🏠 AlloCourses</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link active fw-bold text-light" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="frontend/commande.html">📋 Commander</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="frontend/zones.html">📍 Tarifs</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="frontend/contact.html">📞 Contact</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="frontend/temoignages.html">💬 Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="frontend/commande.html">📋 Commander</a></li>
+          <li class="nav-item"><a class="nav-link" href="frontend/zones.html">📍 Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="frontend/contact.html">📞 Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="frontend/temoignages.html">💬 Témoignages</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-5 text-light" style="background-color:#8fc4e7;">
+  <section class="text-center py-5 hero">
     <img src="logo.jpeg" alt="AlloCourses Logo" class="mb-3" width="120">
     <h1>📞 Bienvenue chez <span class="text-warning">AlloCourses</span> 🛒</h1>
     <p class="fs-5">Le moyen le plus simple et rapide de faire vos courses à Dakar</p>
   </section>
 
-  <div class="container text-dark">
+  <div class="container">
 
     <!-- Pourquoi choisir -->
     <hr>
     <section class="my-5">
-      <h2 class="mb-4 text-dark">🚀 Pourquoi choisir AlloCourses ?</h2>
+      <h2 class="mb-4">🚀 Pourquoi choisir AlloCourses ?</h2>
       <p>
         Fatigué(e) des files d'attente et des allées de supermarché ? AlloCourses vous simplifie la vie.
         On fait vos courses pour vous avec dynamisme et efficacité, et on vous les livre chez vous. 
@@ -63,7 +95,7 @@
     <!-- Ce que nous offrons -->
     <hr>
     <section class="my-5">
-      <h2 class="mb-4 text-dark">👨‍👩‍👧‍👦 Ce que nous offrons :</h2>
+      <h2 class="mb-4">👨‍👩‍👧‍👦 Ce que nous offrons :</h2>
       <div class="row text-center">
         <div class="col-md-3 col-6 mb-3">🛍️ <strong>Simplicité</strong><br><small>Commande rapide par téléphone ou en ligne</small></div>
         <div class="col-md-3 col-6 mb-3">🚚 <strong>Réactivité</strong><br><small>Livraison express dans tout Dakar</small></div>
@@ -75,7 +107,7 @@
     <!-- Qui sommes-nous -->
     <hr>
     <section class="my-5">
-      <h2 class="mb-4 text-dark">💡 Qui sommes-nous ?</h2>
+      <h2 class="mb-4">💡 Qui sommes-nous ?</h2>
       <p>
         AlloCourses est un service 100% dakarois pensé pour vous simplifier la vie.  
         Notre équipe fiable, rapide et discrète effectue vos courses avec soin, selon vos préférences, 
@@ -88,11 +120,11 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center py-4 mt-5" style="background-color:#09304f; color:white;">
+  <footer class="text-center py-4 mt-5 border-top">
     <p>📍 Dakar, Sénégal | 📞 <strong>+221 71 050 84 66</strong></p>
     <p>
       Suivez-nous sur 
-      <a href="https://www.facebook.com/share/1a4UwtXRdf/" target="_blank" class="text-warning fw-bold">Facebook</a>
+      <a href="https://www.facebook.com/share/1a4UwtXRdf/" target="_blank" class="fw-bold">Facebook</a>
     </p>
     <p>&copy; 2025 <strong>AlloCourses</strong>. Tous droits réservés.</p>
   </footer>
